@@ -1,0 +1,18 @@
+h2, h3{
+    text-align: center;
+}
+
+
+
+#foot{
+    background-image: url(../img/dunwoodyfooterlogo.png);
+    background-size: 100%;
+    height: 75px;
+    width: 100%;
+}
+
+#container{
+
+    width: 1100px;
+    margin: auto;
+}
