@@ -36,10 +36,25 @@ body {
     line-height:1;
    }
 
-h2,h3 {
+header{
     text-align: center;
+    line-height: 1.6em;
+    margin-bottom: 22px;
 }
 
+h2{
+  font-size: 1.6em;
+}
+
+h3{
+    font-size: 1.2em;
+    font-weight: 300;
+}
+main{
+    margin-left: 16px;
+    line-height: 2.7em;
+    margin-bottom: 22px;
+}
 #foot{
     background-image: url(../img/dunwoodyfooterlogo.png);
     height: 75px;
@@ -61,3 +76,9 @@ input{
 input:focus{
     outline: none;
 }
+
+img[src="img/filestructure.PNG"]{
+    margin-top: 22px;
+    margin-left: 24%;
+}
+
