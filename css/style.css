@@ -50,7 +50,10 @@ header{
     margin-bottom: 22px;
 }
 
-
+#imagecontain{
+    width: 450px;
+    margin: 26px auto;
+}
 
 
 #foot{
@@ -58,6 +61,21 @@ header{
     background-size: 100%;
     height: 75px;
     width: 100%;
+}
+main{
+    margin-left: 16px;
+    line-height: 2.7em;
+    margin-bottom: 22px;
+}
+
+input:focus {
+    outline: none;
+}
+
+li input {
+    border: none;
+    border-bottom: 1px solid black;
+    margin-left: 12px;
 }
 
 #container{
