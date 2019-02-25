@@ -9,7 +9,7 @@
             .box{
                 border: 10px solid #333;
                 width: 250px;
-                height: 250px;
+                height: 500px;
                 border-radius: 14px;
                 background-color: #bdd358;
                 margin: 12px;
@@ -26,15 +26,37 @@
                 margin: auto;
             }
 
+            .struct{
+                width: 100%;
+                height: 100px;
+                border: 10px solid #333;
+                background-color: rgba(243, 164, 243, 0.685);
+                border-radius: 14%;
+            }
+            .cweb1000{
+                clear: both;
+            }
+            .navstruct{
+                width: 200px;
+            }
+            .articlestruct{
+                width: 325px;
+            }
+            .asidestruct{
+                width: 275px;
+            }
+
 
         
         </style>
 	</head>
 	<body>
         <div id="container">
-            <div class="box"> #1 </div>
-            <div class="box"> #2 </div>
-            <div class="box"> #3 </div>
+            <header class="struct"></header>
+            <nav class="box navstruct"> #1 </nav>
+            <article class="box articlestruct"> #2 </article>
+            <aside class="box asidestruct"> #3 </aside>
+            <footer class="struct cweb1000"></footer>
         </div><!--closing container tag-->
 	</body>
 </html>
