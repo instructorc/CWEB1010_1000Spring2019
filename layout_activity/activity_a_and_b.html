@@ -7,8 +7,9 @@
         <!--Internal CSS Method-->
         <style>
             .box{
+                flex: 1 0 250px;
                 border: 10px solid #333;
-                width: 250px;
+                
                 height: 250px;
                 border-radius: 14px;
                 margin: 12px;
@@ -31,7 +32,7 @@
                 border: 10px solid #333;
                 height: 100px;
                 background-color: olivedrab;
-                border-radius: 20%;
+                border-radius: 14px;
                 clear: both;
             }
             .navbox{
@@ -40,9 +41,21 @@
             }
             .articlebox{
                 width: 350px;
+                order: -1;
             }
             .asidebox{
                 width: 243px;
+            }
+            #flexcontain{
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+            }
+            #four_aside{
+                order: -1;
+            }
+            #box_one{
+                order:1;
             }
             
        
@@ -52,9 +65,15 @@
 	<body>
         <div id="container">
             <header class="struct"></header>
-            <nav class="box navbox"> #1 </nav>
-            <article class="box articlebox"> #2 </article>
-            <aside class="box asidebox"> #3 </aside>
+            <!--Implement CSS Flexbox - always need a container-->
+            <div id="flexcontain">
+                <nav class="box navbox" id="box_one"> #1 </nav>
+                <article class="box articlebox"> #2 </article>
+                <aside class="box asidebox"> #3 </aside>
+                <aside class="box asidebox" id="four_aside"> #4 </aside>
+                <aside class="box asidebox"> #5 </aside>
+                
+            </div><!--end of flex contain-->
             <footer class="struct"></footer>
         </div><!--Closing div container tag-->
 	</body>
