@@ -7,8 +7,9 @@
         <!--Internal CSS Method-->
         <style>
             .box{
+                flex: 1 0 250px;
                 border: 10px solid #333;
-                width: 250px;
+                
                 height: 250px;
                 border-radius: 14px;
                 margin: 12px;
@@ -27,37 +28,45 @@
                 margin: auto;
             }
 
-            #headstruct{
+            .struct{
                 width: 100%;
                 height: 175px;
-                border: 3px solid #333;
-                background-color: #cd0000;
-                border-radius: 14%;
-            }
-            #footstruct{
-                width: 100%;
-                height: 175px;
-                border: 3px solid #333;
-                background-color: #cd0000;
-                border-radius: 14%;
+                border: 10px solid #333;
+                background-color: olivedrab;
+                border-radius: 14px;
                 clear: both;
             }
+
             #logo{
                 width: 175px;
                 margin: auto;
+            }
+            #flexcontain{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            
+            .boxtwo{
+                order: -1;
             }
 
         </style>
 	</head>
 	<body>
         <div id="container">
-            <header id="headstruct">
+            <header class="struct">
                 <div id="logo"><img src="https://via.placeholder.com/150" alt="logo placeholder"></div>
             </header>
-            <div class="box"> #1 </div>
-            <div class="box"> #2 </div>
-            <div class="box"> #3 </div>
-            <footer id="footstruct">
+            <!--Implementing CSS Flexbox - always need a container-->
+            <div id="flexcontain">
+                <div class="box"> #1 </div>
+                <div class="box boxtwo"> #2 </div>
+                <div class="box"> #3 </div>
+                <div class="box"> #4 </div>
+                <div class="box"> #5 </div>
+            </div><!--End of flex contain-->
+            <footer class="struct">
 
             </footer>
         </div><!--Closing div container tag-->
