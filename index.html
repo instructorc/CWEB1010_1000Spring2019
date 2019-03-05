@@ -13,6 +13,7 @@
         <!--Internal CSS Style Method-->
         <style>
             #section_one{
+                padding-top: 7em;
                 width: 100%;
                 height: 750px;
                 background-image: url(img/apartment_interior.png);
@@ -20,6 +21,7 @@
                 background-position: center center;
             }
             #flex_contain{
+                background-color: rgba(0,0,0, .5);
                 border: 2px solid white;
                 display: flex;
                 flex-wrap: wrap;
@@ -27,12 +29,14 @@
                 margin: auto;
             }
             .auth_top{
-                height: 135px;
+                height: 100px;
+                background-color: #111111;
+                color: white;
                 border: 2px solid orangered;
                 flex: 1 0 320px;
             }
             .auth_bottom{
-                height: 450px;
+                height: 500px;
                 border: 2px solid green;
                 flex: 1 0 500px;
             }
@@ -86,9 +90,9 @@
         </header>
         <div id="section_one">
             <div id="flex_contain">
-                <section class="auth_top"></section>
-                <section class="auth_top"></section>
-                <section class="auth_top"></section>
+                <section class="auth_top"> Profile Registration</section>
+                <section class="auth_top">Authentication</section>
+                <section class="auth_top">Agent Registration</section>
                 <section class="auth_bottom"></section>
                 <section class="auth_bottom"></section>
             </div>

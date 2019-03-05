@@ -13,30 +13,35 @@
         <!--Internal CSS Style Method-->
         <style>
             #section_one{
-                height: 750px;
+                padding-top: 7em;
                 width: 100%;
+                height: 750px;
                 background-image: url(img/apartment_interior.png);
                 background-size: cover;
+                background-position: center center;
 
             }
             #flex_contain{
+                background-color: rgba(0,0,0, .5);
+                border: 2px solid white;
                 display: flex;
                 flex-wrap: wrap;
-                height: 700px;
                 width: 85%;
-                border: 2px solid white;
                 margin: auto;
             }
 
             .auth_options{
+                height: 100px;
+                text-align: center;
+                background-color: #111111;
+                color: white;
                 border: 2px solid orangered;
-                 height: 120px;
-                 flex: 1 0 300px;
+                flex: 1 0 320px;
             }
             .auth_info{
+                height: 500px;
                 border: 2px solid green;
-                 height: 560px;
-                flex: 1 0 400px;
+                flex: 1 0 500px;
             }
         </style>
         <!--Montserrat font from Google-->
@@ -90,9 +95,9 @@
             <!--Flex container-->
             <div id="flex_contain">
                 <!--Flex items-->
-                <section class="auth_options"></section>
-                <section class="auth_options"></section>
-                <section class="auth_options"></section>
+                <section class="auth_options"><h5>Profile Registration</h5></section>
+                <section class="auth_options"><h5>Authentication</h5></section>
+                <section class="auth_options"><h5>Agent Registration</h5></section>
                 <section class="auth_info"></section>
                 <section class="auth_info"></section>
             </div>
