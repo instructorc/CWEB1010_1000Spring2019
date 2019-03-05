@@ -12,7 +12,30 @@
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <!--Internal CSS Style Method-->
         <style>
-            
+            #section_one{
+                width: 100%;
+                height: 750px;
+                background-image: url(img/apartment_interior.png);
+                background-size: cover;
+                background-position: center center;
+            }
+            #flex_contain{
+                border: 2px solid white;
+                display: flex;
+                flex-wrap: wrap;
+                width: 85%;
+                margin: auto;
+            }
+            .auth_top{
+                height: 135px;
+                border: 2px solid orangered;
+                flex: 1 0 320px;
+            }
+            .auth_bottom{
+                height: 450px;
+                border: 2px solid green;
+                flex: 1 0 500px;
+            }
         </style>
         <!--Montserrat font from Google-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
@@ -61,10 +84,16 @@
                 <!--End of Mobile Navigation-->
             </div><!--end of div block_contain-->
         </header>
-        <div id="barchart"></div>
+        <div id="section_one">
+            <div id="flex_contain">
+                <section class="auth_top"></section>
+                <section class="auth_top"></section>
+                <section class="auth_top"></section>
+                <section class="auth_bottom"></section>
+                <section class="auth_bottom"></section>
+            </div>
 
-        
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        </div>
         
         <script type="text/javascript">
 
