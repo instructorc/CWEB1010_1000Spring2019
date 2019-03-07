@@ -38,6 +38,44 @@
                 border: 2px solid green;
                 flex: 1 0 500px;
             }
+            /**Grid Style Rules Below**/
+            #section_grid_two{
+                display: grid;
+                border: 1px solid black;
+                width: 100%;
+                height: 700px;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 75px 1fr 170px;
+            }
+            /**Grid item style rules below**/
+            #adsection_one{
+                grid-column: 1;
+                grid-row: 2;
+                border: 2px solid green;
+                width: 600px;
+                height: 400px;
+                margin: auto;
+            }
+
+            #adsection_two{
+                grid-column: 2;
+                grid-row: 2;
+                border: 2px solid purple;
+                width: 600px;
+                height: 400px;
+                margin: auto;
+            }
+
+            #ad_graphic{
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row:3;
+                width: 1000px;
+                height: 75px;
+                border: 2px solid orangered;
+            }
+
+
         </style>
         <!--Montserrat font from Google-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
@@ -95,6 +133,14 @@
                 <section class="auth_bottom"></section>
             </div>
 
+        </div>
+        <!--Implement Grid Layout-->
+        <div id="section_grid_two">
+            <section id="adsection_one"></section>
+            <section id="adsection_two"></section>
+            <div id="ad_graphic">
+                <img src="https://via.placeholder.com/1000x75" alt="placeholder graphic">
+            </div>
         </div>
 
         
