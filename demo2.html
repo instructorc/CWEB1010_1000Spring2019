@@ -10,32 +10,73 @@
 
         <!--Internal CSS Style Method-->
         <style>
+            
+            #headstruct{
+                width: 100%;
+                height: 200px;
+                border: 2px solid black;
 
+            }
+            #logo{
+                width: 120px;
+                height: 100px;
+                border: 2px solid orangered;
+                float: left;
+                margin: 10px;
+            }
+            #social{
+                width: 500px;
+                height: 75px;
+                border: 2px solid blue;
+                margin-top: 20px;
+                float: right;
+
+            }
+            #navstruct{
+                width:100%;
+                height: 70px;
+                border: 2px solid brown;
+                clear: both;
+
+            }
+            #listruct{
+                display: inline;
+            }
             #container{
                 display: flex;
                 flex-wrap: wrap;
-                width: 80%;
-                margin: auto;
-                border: 3px solid orangered;
-                justify-content: space-evenly;
+                width: 100%;
+                height: 650px;
+                border: 2px solid red;
             }
-            .box{
-                border: 3px solid green;
-                flex: 1 0 275px;
-                height: 325px;
-                margin: 10px;
-
+            .boxes{
+                flex: 1 0 auto;
+                height: 500px;
+                border: 2px solid green;
             }
-
 
 
         </style>
     </head>
     <body>
-        <div id="container">
-            <aside class="box"> #1 </aside>
-            <aside class="box"> #2 </aside>
-            <aside class="box"> #3 </aside>
-        </div><!--End of div container-->
+        <header id="headstruct">
+            <div id="logo"></div>
+            <div id="social"></div>
+            <nav id="navstruct">
+                <ul>
+                    <li class="listruct">Home</li>
+                    <li class="listruct">What I Do?</li>
+                    <li class="listruct">Who Am I?</li>
+                    <li class="listruct">Talk To Me</li>
+
+                </ul>
+            </nav>
+        </header>
+        <!--Flex Container-->
+        <main id="container">
+            <div class="boxes"></div>
+            <div class="boxes"></div>
+        </main>
+
     </body>
 </html>
