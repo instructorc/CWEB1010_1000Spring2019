@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+#box{
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    
+}
+#box:hover{
+  width: 300px;
+}
+</style>
+</head>
+<body>
+
+<img onmouseover="bigImg()" onmouseout="outImg()" border="0" src="http://www.i2symbol.com/force_download.php?file=images/symbols/smileys/white_smiling_face_u263A_icon_256x256.png" alt="Smiley" width="32" height="32">
+
+<div id="box">
+</div>
+
+
+
+<script>
+function bigImg() {
+    document.getElementById('box').style.transition = "all 2s";
+document.getElementById('box').style.background = "green";
+document.getElementById('box').style.width = "400px";
+
+}
+
+function outImg() {
+    document.getElementById('box').style.transition = "all 2s";
+document.getElementById('box').style.background = "red";
+document.getElementById('box').style.width = "100px";
+
+}
+
+
+
+
+</script>
+
+</body>
+</html>
