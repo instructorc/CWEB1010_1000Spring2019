@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MPLSRenters.com | Luxury Downtown Minneapolis Apartments</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Luxury Downtown Minneapolis Apartments">
+        <meta name="keywords" content="Luxury Apartments, Downtown Living, Downtown Minneapolis Apartments">
+        <meta name="author" content="C.Fulton">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/code.js"></script>
+        <!--Link to external CSS-->
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <!--Internal CSS Style Method-->
+        <style>
+            #section_one{
+                height: 750px;
+                padding-top: 7em;
+                width: 100%;
+                background-image: url(img/apartment_interior.png);
+                background-size: cover;
+            }
+            #flex_contain{
+                display: flex;
+                background-color: rgba(0,0,0, .6);
+               
+                width: 85%;
+                margin: auto;
+                flex-wrap: wrap;
+            }
+            .auth_top{
+                background-color: #4B4B4B;
+                flex: 1 0 320px;
+                height: 100px;
+                border-right: 2px solid #5a5a5a;
+
+            }
+            section.auth_top:hover {
+                background-color: white;
+                
+            }
+
+            .auth_top h2{
+                color: white;
+                text-align: center;
+                padding: 35px 0px;
+            }
+            .auth_top h2:hover{
+                color: black;
+            }
+            .auth_info{
+                border: 2px solid green;
+                flex: 1 0 425px;
+                height: 550px;
+            }
+
+            /**GRID STYLE RULES **/
+            #section_two_grid{
+                display: grid;
+                height: 700px;
+                width: 100%;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 150px 1fr 1fr;
+            }
+
+            #auth_box_one{
+                grid-row: 2;
+                grid-column: 1;
+                width: 600px;
+                margin: auto;
+                height: 400px;
+                border: 3px solid red;
+            }
+            #auth_box_two{
+                grid-column: 2;
+                grid-row: 2;
+                margin: auto;
+                width: 600px;
+                height: 400px;
+                border: 3px solid blue;
+            }
+            #auth_bottom_graphic{
+                grid-column-start:1;
+                grid-column-end: 3;
+                grid-row: 3;
+                width: 100%;
+                height: 250px;
+            }
+
+
+        </style>
+        <!--Montserrat font from Google-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+        <!--Implementing JQuery Flickity slider plugin-->
+        <!-- JavaScript -->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+
+    </head>
+    <body>
+        <header id="headstruct">
+            <div class="block_contain"><!--Flex container-->
+                <div id="logo">
+                    <img src="img/logo.png" alt="logo">
+                </div><!--Flex item 1-->
+                <nav id="navstruct">
+                    <ul id="listruct">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="process.html">Process</a></li>
+                        <li><a href="#apartment_search_block">Apartments</a></li>
+                        <li><a href="prop_agents.html">Agents</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav><!--flex item 2-->
+                <div id="user_info">
+                    <img src="img/notification_icon.PNG" style="margin-top: 15px;" alt="notification bell">
+                    <img src="img/person_icon.PNG" alt="profile icon">
+                </div><!--flex item 3-->
+                <!--Mobile Navigation-->
+                <nav id="navstruct_mobile"><span id="hamburger_icon"> &#9776;</span>
+                   <!-- <div id="user_info_mobile" style="display: none;">
+                        <img src="img/notification_icon.PNG" style="margin-top: 15px;" alt="notification bell">
+                        <img src="img/person_icon.PNG" alt="profile icon">
+                    </div>-->
+                    <ul id="listruct_mobile" style="display: none;">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="process.html">Process</a></li>
+                        <li><a href="#apartments">Apartments</a></li>
+                        <li><a href="prop_agents.html">Agents</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav><!--flex item 2-->
+
+                <!--End of Mobile Navigation-->
+            </div><!--end of div block_contain-->
+        </header>
+        <div id="section_one">
+            <!--Defining Flex Container-->
+            <div id="flex_contain">
+                <!--Flex Items-->
+                <section class="auth_top">
+                    <h2>Profile Registration</h2>
+                </section>
+                <section class="auth_top">
+                    <h2>Authentication</h2>
+                </section>
+                <section class="auth_top">
+                    <h2>Agent Registration</h2>
+                </section>
+                <section class="auth_info"></section>
+                <section class="auth_info"></section>
+            </div>
+        </div>
+        <!--Defining Grid Container-->
+        <div id="section_two_grid">
+            <!--Grid Items-->
+            <section id="auth_box_one"></section>
+            <section id="auth_box_two"></section>
+            <div id="auth_bottom_graphic">
+                <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1224 220"><defs><style>.cls-1{fill:#111;}.cls-2{font-size:26px;fill:#fff;font-family:Montserrat-Regular, Montserrat;}.cls-3{letter-spacing:0em;}.cls-4{letter-spacing:-0.01em;}.cls-5{letter-spacing:0em;}.cls-6{letter-spacing:0.01em;}.cls-7{letter-spacing:0em;}.cls-8{letter-spacing:0em;}.cls-9{letter-spacing:-0.02em;}.cls-10{letter-spacing:-0.02em;}.cls-11{letter-spacing:-0.01em;}</style></defs><title>Artboard 1</title><polygon class="cls-1" points="0 126 687 126 642 208 0 208 0 126"/><polygon class="cls-1" points="730 126 683 208 714 208 761 126 730 126"/><polygon class="cls-1" points="764 126 717 208 788 208 841 126 764 126"/><polygon class="cls-1" points="844 126 790.5 208 817 208 868 126 844 126"/><text class="cls-2" transform="translate(47 173)">W<tspan class="cls-3" x="28.89" y="0">h</tspan><tspan x="46.54" y="0">e</tspan><tspan class="cls-4" x="62.24" y="0">r</tspan><tspan x="72.33" y="0">e a</tspan><tspan class="cls-5" x="110.19" y="0">p</tspan><tspan x="127.74" y="0">a</tspan><tspan class="cls-6" x="143.08" y="0">r</tspan><tspan x="153.89" y="0">t</tspan><tspan class="cls-7" x="164.45" y="0">m</tspan><tspan class="cls-8" x="192.09" y="0">ents ma</tspan><tspan class="cls-9" x="298.4" y="0">k</tspan><tspan class="cls-8" x="313.48" y="0">e </tspan><tspan class="cls-10" x="335.99" y="0">y</tspan><tspan class="cls-8" x="349.7" y="0">ou an of</tspan><tspan class="cls-11" x="455.18" y="0">f</tspan><tspan x="463.76" y="0">er</tspan></text></svg>
+            </div>
+
+        </div>
+        
+        <script type="text/javascript">
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            // Typical action to be performed when the document is ready:
+
+                var apartmentObject = JSON.parse(this.responseText); //Bring in objects and assigning them to apartmentObject variable
+
+
+                // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+                apartmentObject.sort(function(a,b) {
+                    return a.floor_count - b.floor_count;
+                });
+
+                // Load google charts
+                google.charts.load('current', {'packages':['corechart']});
+                google.charts.setOnLoadCallback(drawChart);
+
+
+                
+                // Draw the chart and set the chart values
+                function drawChart() {
+                    console.log( apartmentObject[0].apartment);
+        
+                var data = google.visualization.arrayToDataTable([
+                ['Apartments', 'Levels', { role: 'style'}], //key or legend
+                [ apartmentObject[0].apartment,  apartmentObject[0].floor_count, '#FECE00'],
+                [  apartmentObject[1].apartment,   apartmentObject[1].floor_count, '#0375B4'],
+                [ apartmentObject[2].apartment ,  apartmentObject[2].floor_count, '#007849'],
+                [ apartmentObject[3].apartment ,  apartmentObject[3].floor_count, '#262228']
+
+                
+                ]);
+                
+                // Optional; add a title and set the width and height of the chart
+                var options = {'title':'Apartment Floor Count Chart', 'width':550, 'height':400};
+                
+                // Display the chart inside the <div> element with id="piechart"
+                var chart = new google.visualization.BarChart(document.getElementById('barchart'));
+                chart.draw(data, options);
+                }
+            }
+        };
+        xhttp.open("GET", "js/apartment.json", true);
+        xhttp.send();
+
+        
+
+
+        </script>
+    
+
+    </body>
+</html>
