@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Midterm Review and Responsive Intro.</title>
+        <style>
+            #headstruct{
+                width: 1200px;
+                height: 250px;
+                border: 2px solid green;
+            }
+            #side{
+                width: 250px;
+                height: 800px;
+                float: left;
+                border: 2px solid orange;
+
+            }
+            #main{
+                width: 930px;
+                height: 800px;
+                float: left;
+                border: 2px solid red;
+            }
+            #foot{
+                width: 1200px;
+                height: 250px;
+                border: 2px solid blue;
+                clear: both;
+            }
+            #container{
+                width: 1220px;
+                margin: auto;
+            }
+
+            /* smaller than 1024 pixels */
+            @media screen and (max-width: 1024px) {
+                #headstruct{
+                    background-color: #cd0000;
+                }
+            }
+            /* smaller than 768 pixels */
+            @media screen and (max-width: 768px) {
+                #headstruct{
+                    background-color: #eeff22;
+                    display: none;
+                }
+            }
+            /* smaller than 480 pixels */
+            @media screen and (max-width: 500px) {
+                #headstruct{
+                    background-color: green;
+                    display: block;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <header id="headstruct"></header>
+            <aside id="side"></aside>
+            <main id="main"></main>
+            <footer id="foot"></footer>
+        </div>
+    </body>
+</html>
