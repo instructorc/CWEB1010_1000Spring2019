@@ -489,6 +489,7 @@ html, body, div, span, object, iframe,
                 
                 #navstruct_mobile{
                     display: block;
+                    flex: 3 0 200px;
                     
                 }
                 #headstruct{
