@@ -3,33 +3,38 @@
     <head>
         <title>Midterm Review and Responsive practice</title>
         <style>
+            #flexcontain{
+                display: flex;
+                flex-wrap: wrap;
+            }
+
             #headstruct{
-                width: 1200px;
+                width: 100%;
                 height: 250px;
                 border: 2px solid green;
 
             }
             #side{
-                width: 250px;
+                flex: 1 0 200px;
                 height: 800px;
                 border: 2px solid orange;
                 float: left;
 
             }
             #main{
-                width: 930px;
+                flex: 1 0 500px;
                 height: 800px;
                 border: 2px solid red;
                 float: left;
             }
             #foot{
-                width: 1200px;
+                width: 100%;
                 height: 250px;
                 border: 2px solid blue;
                 clear: both;
             }
             #wrapper{
-                width: 1220px;
+                width: 90%;
                 margin: auto;
             }
 
@@ -47,12 +52,18 @@
                 }
             }
             /* smaller than 480 pixels */
-            @media screen and (max-width: 500px) {
+            @media screen and (max-width: 580px) {
                 #headstruct{
                     background-color: green;
                     display: block;
 
                 }
+                #main {
+                    flex: 1 0 420px;
+  
+                }
+
+               
             }
 
         </style>
@@ -60,8 +71,10 @@
     <body>
         <div id="wrapper">
             <header id="headstruct"></header>
-            <aside id="side"></aside>
-            <main id="main"></main>
+            <div id="flexcontain">
+                <aside id="side"></aside>
+                <main id="main"></main>
+            </div>
             <footer id="foot"></footer>
         </div>
     </body>
