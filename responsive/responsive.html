@@ -4,31 +4,35 @@
         <title>Midterm Review and Responsive Intro.</title>
         <style>
             #headstruct{
-                width: 1200px;
+                width: 100%;
                 height: 250px;
                 border: 2px solid green;
             }
             #side{
-                width: 250px;
+                flex: 1 0 200px;
                 height: 800px;
                 float: left;
                 border: 2px solid orange;
 
             }
+            #flexcontain{
+                display: flex;
+                flex-wrap: wrap;
+            }
             #main{
-                width: 930px;
+                flex: 1 0 635px;
                 height: 800px;
                 float: left;
                 border: 2px solid red;
             }
             #foot{
-                width: 1200px;
+                width: 100%;
                 height: 250px;
                 border: 2px solid blue;
                 clear: both;
             }
             #container{
-                width: 1220px;
+                width: 85%;
                 margin: auto;
             }
 
@@ -39,10 +43,17 @@
                 }
             }
             /* smaller than 768 pixels */
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 780px) {
                 #headstruct{
                     background-color: #eeff22;
                     display: none;
+                }
+                #main{
+                    flex: 1 0 420px;
+
+                }
+                #foot{
+                background-image: url(img/apartment_interior.jpg);
                 }
             }
             /* smaller than 480 pixels */
@@ -57,8 +68,10 @@
     <body>
         <div id="container">
             <header id="headstruct"></header>
-            <aside id="side"></aside>
-            <main id="main"></main>
+            <div id="flexcontain">
+                <aside id="side"></aside>
+                <main id="main"></main>
+            </div>
             <footer id="foot"></footer>
         </div>
     </body>
