@@ -10,49 +10,38 @@
             }
             li{
                 display: inline;
-                padding: 17px 0px;
+                padding: 17px;
                 font-family: arial;
             }
             a{
                 text-decoration: none;
-                padding: 17px;
-            }
-            #flexcontainer{
-
-                display: flex;
-                flex-wrap: wrap;
-
             }
             #headstruct{
-                width:100%;
+                width: 1200px;
                 height: 250px;
                 border: 2px solid green;
             }
             #side{
-                flex: 1 0 200px;
+                width: 250px;
                 height: 850px;
                 border: 2px solid orangered;
-               
+                float: left;
             }
             #main{
-                flex: 1 0 500px;
-                width: 75%;
+                width: 930px;
                 height: 850px;
                 border: 2px solid red;
-                
-            }
-            #main img{
-               width: 100%; 
+                float: left;
             }
 
             #foot{
-                width: 100%;
+                width: 1200px;
                 height: 250px;
                 clear: both;
                 border: 2px solid blue;
             }
             #container{
-                width: 90%;
+                width: 1220px;
                 margin: auto;
             }
 
@@ -82,19 +71,15 @@
         <div id="container">
             <header id="headstruct">
                 <nav id="navstruct">
-                    
-                        <a style="font-weight: 900; background-color:#cd0000;" href="responsive.html">Home</a>
-                        <a href="about.html">About</a>
-                        <a href="contact.html">Contact</a>
-                    
+                    <ul>
+                        <li><a href="responsive.html">Home</a></li>
+                        <li style="font-weight: 900; background-color:#cd0000;"><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </nav>
             </header>
-            <div id="flexcontainer">
-                <aside id="side"></aside>
-                <main id="main">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/8/83/Strong_Bad.png" alt="strong bad">
-                </main>
-            </div>
+            <aside id="side"></aside>
+            <main id="main"></main>
             <footer id="foot"></footer>
         </div>
 
