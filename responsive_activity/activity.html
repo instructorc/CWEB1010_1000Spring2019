@@ -13,6 +13,10 @@
                 flex-wrap: wrap;
                 margin: auto;
             }
+            #box_one img{
+                max-width: 100%;
+            }
+
             #box_one{
                 flex: 1 0 250px;
                 height: 500px;
@@ -86,7 +90,13 @@
     <body>
         
         <div id="container">
-            <section id="box_one"> <h1>BOX 1</h1></section>
+            <section id="box_one">
+                    <picture>
+                        
+                        <source media="(max-width: 768px)" srcset="baseball_768.jpg" >
+                        <img src="baseball.jpg" alt="Twins Opener" >
+                    </picture>
+            </section>
             <section id="box_two"><h1>BOX 2</h1></section>
             <section id="box_three"><h1>BOX 3</h1></section>
             <section id="box_four"><h1>BOX 4</h1></section>
