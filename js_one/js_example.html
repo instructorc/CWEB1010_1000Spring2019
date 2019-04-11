@@ -17,18 +17,33 @@
                 font-family: arial;
                 box-shadow: 2px 2px 10px #333;
             }
-        </style>
 
+            #button_two{
+                width: 200px;
+                height: 75px;
+                background-color: orangered;
+                text-align: center;
+                color: white;
+                margin: auto;
+                padding-top: 2%;
+                font-family: arial;
+                box-shadow: 2px 2px 10px #333;
+            }
+        </style>
+        <!--Implementing External JS-->
+        <script src="js/js_stuff.js" defer></script>
     </head>
     <body>
         <!--Inline JS using Event attributes-->
         <div id="button" onmouseout="window.alert('Coming from inline event attribute');">Click Here</div>
-
+        <img src="https://gozags.com/s3/gozags.com/custompages/gallery/MBB_vs_UW/thumbs/_big_DSC_3252.JPG?width=400&height=400&mode=crop&quality=80&format=jpg">
         <!--Internal JS Implementation-->
         <script>
-                document.getElementById('button').onclick = function(){
-                    window.alert('Coming from internal CSS');
-                }
+            document.getElementById('button').onmouseenter = function(){
+                document.body.style.backgroundColor = "#cd0000";
+            }
         </script>
+
+        
     </body>
 </html>
