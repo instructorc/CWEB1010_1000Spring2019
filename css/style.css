@@ -210,7 +210,7 @@ html, body, div, span, object, iframe,
                 border: none;
                 border-bottom: 2px solid white;
             }
-            form > button {
+            form >  button {
                 background-color:#0098B6;
                 font-size: 1.4em;
                 color: white;
