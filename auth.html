@@ -48,7 +48,7 @@
                 color: black;
             }
             .auth_info{
-                
+                color: white;
                 padding: 3% 3%;
                 flex: 1 0 43%;
                 height: 500px;
@@ -67,6 +67,12 @@
                 padding: 7px 20px 5px 0px;
                 
             }
+
+            #auth_form{
+                display: none;
+            }
+
+
 
             /**GRID STYLE RULES **/
             #section_two_grid{
@@ -161,13 +167,13 @@
             <!--Defining Flex Container-->
             <div id="flex_contain">
                 <!--Flex Items-->
-                <section class="auth_top">
+                <section id="prof_registration_tab" class="auth_top">
                     <h2>Profile Registration</h2>
                 </section>
-                <section class="auth_top">
+                <section id="authentication_tab" class="auth_top">
                     <h2>Authentication</h2>
                 </section>
-                <section class="auth_top">
+                <section id="agent_registration_tab" class="auth_top">
                     <h2>Agent Registration</h2>
                 </section>
                 <section class="auth_info" style="border-right: 3px solid #eee;">
@@ -183,7 +189,41 @@
                         sell or bombard you with advertisement
                         </p>
                 </section>
-                <section class="auth_info"></section>
+                <section class="auth_info">
+                    
+                    <p>Complete additional fields to create your profile.</p>
+                    <form id="sign_up_form" action="secure_server.html" method="GET">
+                            
+                        <label>First Name: </label> <input type="text" maxlength="30" id="first"  name="fname">
+                        <label>Last Name: </label> <input type="text" maxlength="30" id="last"  name="lname">
+                        <label>Email: </label> <input type="text" id="email" maxlength="30" >
+                        <label>Preferred Move-in Month:</label> <input type="month" id="preferred_month" name="move_in">
+                        <label>Preferred Rent Range:</label>
+                        <select name="rent_range" id="rent_range">
+                            <option value="1">$650 - $999</option>
+                            <option value="2">$1000 - $1399</option>
+                            <option value="3">$1400 - $1599</option>
+                            <option value="4">$1600 - $1999</option>
+                            <option value="5">$2000 - $2499</option>
+                            <option value="6">$2500 - $2999</option>
+                            <option value="7">$3000 - $3499</option>
+                            <option value="8">$3500 - $3999</option>
+                            <option value="9">$4000 - $4999</option>
+                            <option value="10">$5000+</option>
+                        </select> 
+                     
+                        <button type="submit" id="submit">Complete Profile</button>
+                    </form>
+                    <form id="auth_form" action="secure_server.html" method="GET">
+                            
+                            <label>Username: </label> <input type="text" maxlength="30" id="first"  name="fname">
+                            <label>Password: </label> <input type="password" maxlength="30" id="last"  name="lname">
+
+                         
+                            <button type="submit" id="submit">Login to Account</button>
+                        </form>
+
+                </section>
             </div>
         </div>
         <!--Defining Grid Container-->
@@ -196,6 +236,14 @@
             </div>
 
         </div>
+
+        <!--JS for Auth Page-->
+        <script>
+            document.getElementById('authentication_tab').addEventListener('click', function(){
+                document.getElementById('sign_up_form').style.display = "none";
+                document.getElementById('auth_form').style.display = "block";
+            });
+        </script>
         
         <script type="text/javascript">
 
