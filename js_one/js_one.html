@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Javascript Example</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            #button{
-                width: 200px;
-                height: 100px;
-                background-color: olivedrab;
-                color: white;
-                text-align: center;
-                padding-top: 2%;
-                font-family: arial;
-            }
-        </style>
-    </head>
-    <body>
-        <!--Inline JS using event attributes-->
-        <div id="button" onmouseout="window.alert('Good Morning - Clicked from inline attribute')">Click me!!!</div>
+       <head>
+		
+		<title>Simple JS program </title>
+	</head>
+	<body>
+		<!--Internal script tags-->
+        <script> 
+        //Declaring the variable
+        var name;
+        var program;
+        var numOfCredits;
+
+        name = "Chris";
+        console.log(name);
+        program = "CWEB";
+        console.log(program);
+        numOfCredits = 17;
+        console.log(numOfCredits);
+        console.log("My name is : " + name + " My program is " + program + " and I have " + numOfCredits + " credits.");
+        window.alert("My name is : " + name + " My program is " + program + " and I have " + numOfCredits + " credits.")
+
         
-
-
-        <!--Internal JS example-->
-        <script>
-            document.getElementById('button').onclick = function(){
-                window.alert('Good Morning - clicked from internal');
-            };
+        
         </script>
-    </body>
+	</body>
 </html>
