@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>  
+  <body>
+    <script>
+      var name = window.prompt("Please enter your name");
+      var age = window.prompt("Please enter your age");
+      
+      main(name, age); //Call or involk the defined main function
+      
+      //Defining the a named function
+      function main(name, age){
+         window.alert("Hello " + name + " your age is " + age);
+      }
+    
+    </script>
+  </body>
+</html>
