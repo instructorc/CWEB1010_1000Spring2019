@@ -13,17 +13,49 @@
     <script src="/script.js" defer></script>
   </head>  
   <body>
+
+    <form action=""  method="">
+        Enter your first number:<br>
+        <input type="text" size="4" id="numone" maxLength="4" name="numone"><br>
+        Enter your second number:<br>
+        <input type="text" size="4" id="numtwo" maxLength="4" name="numtwo"><br>
+        <input type="button" id="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+    <h3>The Sum of Numbers:</h3>
+    <p id="sum"></p>
+    <h3>Numbers multiplied:</h3>
+    <p id="multi"></p>
     <script>
-      var name = window.prompt("Please enter your name");
-      var age = window.prompt("Please enter your age");
-      
-      main(name, age); //Call or involk the defined main function
-      
-      //Defining the a named function
-      function main(name, age){
-         window.alert("Hello " + name + " your age is " + age);
+      //target the button element in my form
+      document.getElementById('submit').addEventListener('click', calculate);
+
+      function calculate(){
+        //get the two numbers I want to calculate
+        var number_one = parseInt(document.getElementById('numone').value);  //targets my first inputbox
+        var number_two = parseInt(document.getElementById('numtwo').value);  //targets second input box
+        
+        //Call or invoke the add function
+        add(number_one, number_two);
+
+        //Call or invoke the multi function
+        multi(number_one, number_two);
+        
       }
-    
+
+
+      //function that adds the two values
+      function add(number_one, number_two){
+        var sum = number_one + number_two;
+        document.getElementById('sum').innerHTML = sum;
+      }
+
+
+      //function that multiplies the two values
+      function multi(number_one, number_two){
+        var total = number_one * number_two;
+        document.getElementById('multi').innerHTML = total;
+      }
     </script>
   </body>
 </html>
