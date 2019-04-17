@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Javascript Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+
+        </style>
+        <!--Implementing External JS-->
+        <script src="js/change_dom.js" defer></script>
+    </head>
+    <body>
+            <form action="" method="">
+                <label>Enter first number</label>
+                <input type="text" id="number_one" size="5" maxlength="6">
+                <label>Enter second number</label>
+                <input type ="text" id="number_two" size="5" maxlength="6"><br>
+                <input type="button" id="submit_btn" value="Submit">
+                <input type="reset" value="Reset">
+
+
+            </form>
+            <h2>Numbers added:</h2>
+            <p id="added"></p>
+            <h2>Numbers multiplied:</h2>
+            <p id="multiplied"></p>
+
+
+
+        <!--Internal JS example-->
+        <script>
+            //Listening for an event on the submit button and run's the calculate function
+            document.getElementById('submit_btn').addEventListener('click', calculate);
+
+            function calculate(){
+                var numberOne = parseInt(document.getElementById('number_one').value);
+                var numberTwo = parseInt(document.getElementById('number_two').value);
+             
+                //Call the addNumbers function
+                addNumbers(numberOne, numberTwo);  //Calling or involking the function
+                multiplyNumbers(numberOne, numberTwo);
+
+            }
+            
+            //Adding two numbers together and outputing values to the screen - Defining the function
+            function addNumbers(numOne, numTwo){
+                var sum = numOne + numTwo;
+                console.log(sum);
+                document.getElementById('added').innerHTML = sum;
+            }
+            
+            //Multiply Two numbers and output to the scrren
+            function multiplyNumbers(numOne, numTwo){
+                var output = numOne * numTwo;
+                console.log(output);
+                document.getElementById('multiplied').innerHTML = output;
+            }
+
+        </script>
+        
+    </body>
+</html>
