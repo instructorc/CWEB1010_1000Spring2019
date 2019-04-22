@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Working with named Functions</title>
+	</head>
+	<body>
+        <div style="background-color: olivedrab; width: 100px; height: 75px; text-align: center; padding-top: 2%; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"> Click Me </div>
+        
+        
+
+        <script>
+
+            document.getElementsByTagName('div')[0].addEventListener('click', () =>{
+                //get document doctype
+                var doctype = document.doctype;
+                //get document URL
+                var url = document.URL;
+                //get document title
+                var title = document.title;
+
+                //alert the above information in an alert window
+                alert(`This is the doctype: ${doctype} \n This is the URL: #{url} \n This is the title ${title} `)
+            });
+        </script>
+	</body>
+</html>
