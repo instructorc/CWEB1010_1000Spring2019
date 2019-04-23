@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!--Internal JS-->
+    <script>
+        
+        //Declare an array that holds all the months - Sequence
+        var months = ["January", "February","March", "April","May","June","July","August","September","October","November", "December"];
+
+        var listItems = document.getElementsByTagName('li');
+
+        //Initial Value
+       
+
+        //Looping structure
+        for(var x = 0; x < 12; x = x+1){
+
+            //Selection Structure
+            if(x == 4){
+                listItems[x].innerHTML = months[x] + " The semester is over!!";
+            }else if(x == 7){
+                listItems[x].innerHTML = months[x] + " Fall 2019 Semester starts!!";  
+            }else{
+                listItems[x].innerHTML = months[x];
+            }
+            
+        }
+    
+    </script>
+</body>
+</html>
