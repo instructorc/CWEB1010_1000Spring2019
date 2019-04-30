@@ -69,7 +69,11 @@
             }
 
             #auth_form{
-                display: none;
+                visibility: hidden;
+            }
+
+            #agent_sign_up_form{
+                visibility: hidden;
             }
 
 
@@ -110,6 +114,7 @@
             #user_info img:hover{
                 animation: flash 3s;
             }
+
 
    
        
@@ -178,7 +183,7 @@
                 <section id="agent_registration_tab" class="auth_top">
                     <h2>Agent Registration</h2>
                 </section>
-                <section class="auth_info" style="border-right: 3px solid #eee;">
+                <section id="auth_info_section_one" class="auth_info" style="border-right: 3px solid #eee;">
                     <h2>Apartment Offers</h2>
                     <p>Apartments make you offers and provide you with thier best deal</p>
                     <h2>100% Free</h2>
@@ -188,8 +193,7 @@
                         in downtown Minneapolis</p>
                     <h2>No Soliciting</h2>
                     <p>Your Information is safe.  We will never
-                        sell or bombard you with advertisement
-                        </p>
+                        sell or bombard you with advertisement</p>
                 </section>
                 <section class="auth_info">
                     
@@ -217,6 +221,22 @@
                         <button type="submit" id="submit">Complete Profile</button>
                     </form>
 
+                    <form id="agent_sign_up_form" action="secure_server.html" method="GET">
+                            
+                            <label>First Name: </label> <input type="text" maxlength="30" id="first"  name="fname">
+                            <label>Last Name: </label> <input type="text" maxlength="30" id="last"  name="lname">
+                            <label>Email: </label> <input type="text" id="email" maxlength="30" >
+                            <label>Agency/Property Company name:</label> <input type="text" name="company">
+                            <label>Plans:</label>
+                            <select name="rent_range" id="rent_range" onchange="generatePlanSavings(this.value)">
+                                <option value="250">Monthly rate - $250</option>
+                                <option value="700">Quarterly rate - $700</option>
+                                <option value="2500">Annual rate - $2500</option>
+                            </select>
+                         
+                            <button type="submit" id="submit">Complete Registration</button>
+                    </form>
+
                     <form id="auth_form" action="secure_server.html" method="GET">
                             
                             <label>Username: </label> <input type="text" maxlength="30" id="first"  name="fname">
@@ -224,7 +244,7 @@
 
                          
                             <button type="submit" id="submit">Login to Account</button>
-                        </form>
+                    </form>
 
                 </section>
                 
@@ -244,9 +264,32 @@
         <!--JS for Auth Page-->
         <script>
             document.getElementById('authentication_tab').addEventListener('click', function(){
-                document.getElementById('sign_up_form').style.display = "none";
-                document.getElementById('auth_form').style.display = "block";
+                document.getElementById('sign_up_form').style.visibility = "hidden";
+                document.getElementById('auth_form').style.visibility = "visible";
             });
+
+            document.getElementById('agent_registration_tab').addEventListener('click', function(){
+            document.getElementById('sign_up_form').style.visibility = "hidden";
+            document.getElementById('agent_sign_up_form').style.visibility = "visible";
+            document.getElementById('agent_sign_up_form').style.marginTop = "-22em";
+            });
+
+
+            //Define function that take in the parameter of plan selection
+            function generatePlanSavings(aValue){
+              var childElements = document.getElementById('auth_info_section_one').children;
+
+              //Looping Structure that clears all text
+              for(var x = 0; x < childElements.length; x++){
+                  childElements[x].style.display = "none";
+              }
+
+              childElements[0].style.display ="block";
+              childElements[0].innerHTML = aValue;
+            }
+
+
+
         </script>
         
         <script type="text/javascript">
@@ -300,6 +343,7 @@
 
 
         </script>
+
 
     
 

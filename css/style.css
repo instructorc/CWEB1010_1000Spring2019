@@ -198,6 +198,8 @@ html, body, div, span, object, iframe,
                 outline: none;
                 
             }
+
+
             form > label {
                 flex: 1 0 130px;
                 height: 25px;
