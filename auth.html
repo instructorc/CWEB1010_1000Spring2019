@@ -221,7 +221,7 @@
                         <button type="submit" id="submit">Complete Profile</button>
                     </form>
 
-                    <form id="agent_sign_up_form" action="secure_server.html" method="GET">
+                    <form id="agent_sign_up_form" action="" method="GET">
                             
                             <label>First Name: </label> <input type="text" maxlength="30" id="first"  name="fname">
                             <label>Last Name: </label> <input type="text" maxlength="30" id="last"  name="lname">
@@ -234,7 +234,7 @@
                                 <option value="2500">Annual rate - $2500</option>
                             </select>
                          
-                            <button type="submit" id="submit">Complete Registration</button>
+                            <button type="submit" id="reg_submit">Complete Registration</button>
                     </form>
 
                     <form id="auth_form" action="secure_server.html" method="GET">
@@ -277,6 +277,8 @@
 
             //Define function that take in the parameter of plan selection
             function generatePlanSavings(aValue){
+
+              var discount;
               var childElements = document.getElementById('auth_info_section_one').children;
 
               //Looping Structure that clears all text
@@ -284,9 +286,41 @@
                   childElements[x].style.display = "none";
               }
 
-              childElements[0].style.display ="block";
-              childElements[0].innerHTML = aValue;
+              //Selection
+              if(aValue == "250"){
+                  discount = "This plan is the normal monthly rate with no annual discount";
+              }else if(aValue == "700"){
+                  discount = "This plan saves your $200 annually";
+              }else{
+                  discount = "This plan saves you $500 annually";
+              }
+
+              childElements[0].style.display = "block";
+              childElements[0].innerHTML = "Plan Selection:";
+              childElements[1].style.display = "block";
+              childElements[1].innerHTML = discount;
+
+   
             }
+
+            document.getElementById('reg_submit').addEventListener('click', generateInvitationCode);
+
+            //Define function that generated invitation code
+            function generateInvitationCode(){
+
+                var appendText = "INVT";
+                var firstName, lastName;
+
+                //Target and get the value of end-user first name
+                firstName = document.getElementById('first').value;
+
+                //Target and get the value of end-user last name
+                lastName = document.getElementById('last').value;
+            }
+
+      
+
+
 
 
 
