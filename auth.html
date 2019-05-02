@@ -221,7 +221,7 @@
                         <button type="submit" id="submit">Complete Profile</button>
                     </form>
 
-                    <form id="agent_sign_up_form" action="" method="GET">
+                    <form id="agent_sign_up_form" method="GET">
                             
                             <label>First Name: </label> <input type="text" maxlength="30" id="first"  name="fname">
                             <label>Last Name: </label> <input type="text" maxlength="30" id="last"  name="lname">
@@ -269,9 +269,11 @@
             });
 
             document.getElementById('agent_registration_tab').addEventListener('click', function(){
-            document.getElementById('sign_up_form').style.visibility = "hidden";
-            document.getElementById('agent_sign_up_form').style.visibility = "visible";
-            document.getElementById('agent_sign_up_form').style.marginTop = "-22em";
+                document.getElementById('sign_up_form').style.visibility = "hidden";
+                document.getElementById('agent_sign_up_form').style.visibility = "visible";
+                document.getElementById('agent_sign_up_form').style.marginTop = "-22em";
+                clearRightPanel();
+                generateAgentContent();
             });
 
 
@@ -280,11 +282,8 @@
 
               var discount;
               var childElements = document.getElementById('auth_info_section_one').children;
-
-              //Looping Structure that clears all text
-              for(var x = 0; x < childElements.length; x++){
-                  childElements[x].style.display = "none";
-              }
+              
+              clearRightPanel();
 
               //Selection
               if(aValue == "250"){
@@ -303,23 +302,66 @@
    
             }
 
+            function clearRightPanel(){
+                var childElements = document.getElementById('auth_info_section_one').children;
+
+                //Looping Structure that clears all text
+                for(var x = 0; x < childElements.length; x++){
+                    childElements[x].style.display = "none";
+                }
+            }
+
             document.getElementById('reg_submit').addEventListener('click', generateInvitationCode);
 
             //Define function that generated invitation code
             function generateInvitationCode(){
-
-                var appendText = "INVT";
-                var firstName, lastName;
+                var childElements = document.getElementById('auth_info_section_one').children;
+                var APPEND_TEXT = "INVT";
+                var firstName, lastName, invitationCode;
 
                 //Target and get the value of end-user first name
                 firstName = document.getElementById('first').value;
 
                 //Target and get the value of end-user last name
                 lastName = document.getElementById('last').value;
+
+                invitationCode = APPEND_TEXT + firstName.substring(0,2) + lastName.substring(0,2);
+
+                childElements[2].style.display = "block";
+                childElements[2].innerHTML = "Your Unique Invitation Code:";
+                childElements[3].style.display = "block";
+                childElements[3].innerHTML = invitationCode;
+
+                event.preventDefault();
             }
 
       
-
+            function generateAgentContent(){
+                var childElements = document.getElementById('auth_info_section_one').children;
+                //Looping Structure that displays and writes new content for Agent
+                for(var x = 0; x < childElements.length; x++){
+                    childElements[x].style.display = "block";
+                    if(x == 0){
+                        childElements[x].innerHTML = "Agent Benefits";
+                    }
+                    if(x == 1){
+                        childElements[x].innerHTML = "Find qualified renters who are ready to sign a lease.  Receive a list of potential renters who are interested in your rental community.";
+                    }
+                    if(x == 2){
+                        childElements[x].innerHTML = "Offer Best Rate";
+                    }
+                    if(x == 3){
+                        childElements[x].innerHTML = "Message and contact each potential renter.  Offer them your best rate and have them sign-up for a tour.";
+                    }
+                    if(x == 4){
+                        childElements[x].innerHTML = "Qualified Residents";
+                    }
+                    if(x == 5){
+                        childElements[x].innerHTML = "Your account will have qualified leads who are ready to lease an apartment from you.   No need to let apartments sit dormant, find your next renter on mplsrenter.com";
+                    }
+                }
+                
+            }
 
 
 
