@@ -141,11 +141,11 @@
 
                 <aside class="apart_struct">
                     <div id="apart_boxes">
-                        <img src="img/apartment_logo/niclogoblack_logo.png" class="apart_logo" data-id="2" id="nic" alt="nic on fifth logo" >
-                        <img src="img/apartment_logo/nicolette_365.jpg" class="apart_logo" data-id="1" id="nicolette" alt="nicolette 365 logo">
-                        <img src="img/apartment_logo/nordhaus-logo.png" class="apart_logo" data-id="3" id="nordhaus" alt="nordhaus logo">
-                        <img src="img/apartment_logo/latitude45_logo.jpg" class="apart_logo" data-id="4" id="nordhaus" alt="latitude 45 logo">
-                        <img src="img/apartment_logo/encore.png" class="apart_logo" data-id="5" id="nordhaus" alt="encore logo">
+                        <img src="img/apartment_logo/NicLogoBlack_logo.png" class="apart_logo" data-id="2"  data-region="Downtown West" id="nic" alt="nic on fifth logo" >
+                        <img src="img/apartment_logo/nicolete_365.png" style="filter: invert(100%);" class="apart_logo" data-id="1" data-region="Downtown West" id="nicolette" alt="nicolette 365 logo">
+                        <img src="img/apartment_logo/nordhaus-logo.png" class="apart_logo" data-id="3" data-region="Downtown North" id="nordhaus" alt="nordhaus logo">
+                        <img src="img/apartment_logo/latitude_logo1.png" style="filter: invert(100%);" class="apart_logo" data-id="4" data-region="Downtown West" id="latitude" alt="latitude 45 logo">
+                        <img src="img/apartment_logo/encore.png" class="apart_logo" data-id="5" data-region="Downtown East" id="encore" alt="encore logo">
                     </div>
                 </aside>
                 <aside class="apart_struct">
@@ -276,12 +276,18 @@
             /**filter by region**/
             function getByRegion(selection){
                 var data= [];
-                for(var x = 0; x < apartment.length; x++){
-                    if(apartment[x].city_region === selection){
-                    data.push(apartment[x]);
-                    console.log(apartment[x].apartment);
+                if(selection == "all"){
+
+                    
+                    
+                }else{
+                    for(var x = 0; x < apartment.length; x++){
+                        if(apartment[x].city_region === selection){
+                        data.push(apartment[x]);
+                        console.log(apartment[x].apartment);
+                        }
+                  
                     }
-              
                 }
                 //get one of the values in the array and pass in the propery_id from the array
                 
@@ -290,20 +296,40 @@
                 initMap(data);//call the function and pass the selected data array and determine which markers should display
             }
             function filterApartments(data, selection){
+                //Turn all the images off by setting them to display none
                 generateImages();
                 //get all images
                 var images = document.getElementsByClassName('apart_logo');
                 //iterate through the data array and only show images that are included in array
                 //var index = data.findIndex(data.city_region == selection);
-                for(var i = 0; i < data.length; i++){
-                    //display the images from the data array
-                        //make a decision as to 
+                
+                /**for(var w = 0; w < images.length; w++){
+                    if(images[w].dataset.region == selection){
+                        images[w].style.display = "block";
+                    }
+                    
+                }**/
+             
+                if(selection === "all"){
+                    for(var b = 0; b < images.length; b++){
+                        images[b].style.display ="block";
+                    }
+                           
+                            
+                }else{
+                    for(var i = 0; i < data.length; i++){
+                        //display the images from the data array
+                            //make a decision as to 
+                           
+                            
                         for(var w = 0; w < images.length; w++){
-                            if((data[i].property_id == images[w].dataset.id) || (selection == "all")){
+                            if(data[i].property_id == images[w].dataset.id){
                                 images[w].style.display = "block";
                             }
                         }
                     
+                        
+                    }
                 }
                 
                 
@@ -321,11 +347,13 @@
                 //declare variables
                 var marker, i;
                 
+                
                 //iterate through the apartment data and create new instances of a marper that will be applied to map
                 for(i = 0; i < data.length; i++) {  
                     marker = new google.maps.Marker({
                         position: new google.maps.LatLng(data[i].latitude, data[i].longitude),
-                        map: map
+                        map: map,
+                        title: data[i].apartment
                     });
                 }
             }

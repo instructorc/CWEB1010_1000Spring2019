@@ -242,6 +242,7 @@ html, body, div, span, object, iframe,
                 max-width: 300px;
                 font-family: 'Montserrat', sans-serif;
                 min-width: 400px;
+                border-bottom: 2px solid black;
             }
             #filter label{
                 
