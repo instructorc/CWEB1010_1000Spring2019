@@ -210,7 +210,7 @@ html, body, div, span, object, iframe,
                 background-color:transparent;
                 color: white;
                 border: none;
-                border-bottom: 2px solid white;
+                border-bottom: 1px solid white;
             }
             form >  button {
                 background-color:#0098B6;
@@ -228,24 +228,28 @@ html, body, div, span, object, iframe,
 
             /**Apartment section style rules**/
 
-            #filter{
+            #filter {
                 display: flex;
+                border-radius: 5px;
                 height: 155px;
                 width: 80%;
-                padding: 2%;
-                align-items:center;
+                padding: 1%;
+               
+                align-items: center;
                 margin: auto;
-
+                margin-bottom: 20px;
+                margin-top: 20px;
             }
             #filter select{
                 color: black;
                 max-width: 300px;
                 font-family: 'Montserrat', sans-serif;
                 min-width: 400px;
+                font-weight: 900;
                 border-bottom: 2px solid black;
             }
             #filter label{
-                
+                font-weight: 900;
                 flex: 1 0 400px;
             }
             .slidecontainer {
@@ -272,7 +276,7 @@ html, body, div, span, object, iframe,
                 appearance: none;
                 width: 25px;
                 height: 25px;
-                background: #0098B6;
+                background: #000;
                 cursor: pointer;
             }
             
@@ -425,10 +429,12 @@ html, body, div, span, object, iframe,
             .upscale_img{
                 background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/upscale.jpg);
                 background-size: cover;
+                transition: all .2s ease-in-out;
                 
             }
 
             .upscale_img:hover{
+                transform: scale(1.1);
                 background: linear-gradient( rgba(0, 152, 182, 0.623), rgba(0, 152, 182, 0.623)), url(../img/upscale.jpg);
                 background-size: cover;
                 font-size: 1.8em;
@@ -438,8 +444,10 @@ html, body, div, span, object, iframe,
             .luxury_img{
                 background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/luxury.jpg);
                 background-size: cover;
+                transition: all .2s ease-in-out;
             }
             .luxury_img:hover{
+                transform: scale(1.1);
                 background: linear-gradient( rgba(0, 152, 182, 0.623), rgba(0, 152, 182, 0.623)), url(../img/luxury.jpg);
                 background-size: cover;
                 font-size: 1.8em;
@@ -447,8 +455,10 @@ html, body, div, span, object, iframe,
             .elegant_img{
                 background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/elegant.jpg);
                 background-size: cover;
+                transition: all .2s ease-in-out;
             }
             .elegant_img:hover{
+                transform: scale(1.1);
                 background: linear-gradient( rgba(0, 152, 182, 0.623), rgba(0, 152, 182, 0.623)), url(../img/elegant.jpg);
                 background-size: cover;
                 font-size: 1.8em;
