@@ -331,6 +331,7 @@ html, body, div, span, object, iframe,
                 max-width: 150px;
                 object-fit: contain;
                 transition: all 3s;
+                margin-bottom: 6%;
                 
             }
 
