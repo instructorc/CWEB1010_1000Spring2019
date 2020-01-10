@@ -57,7 +57,7 @@ html, body, div, span, object, iframe,
                 
             }
             h3{
-                font-size: 2.8em;
+                font-size: 2.8vw;
                 font-weight: 300;
                 line-height: 262px;
             }
@@ -71,6 +71,7 @@ html, body, div, span, object, iframe,
             }
             #footstruct{
                 display: flex;
+                flex-wrap: wrap;
                 min-height: 400px;
                 width: 100%;
                 background-color: #eee;
@@ -282,6 +283,7 @@ html, body, div, span, object, iframe,
 
             #filter {
                 display: flex;
+                flex-wrap: wrap;
                 border-radius: 5px;
                 height: 155px;
                 width: 80%;
@@ -490,7 +492,7 @@ html, body, div, span, object, iframe,
                 transform: scale(1.1);
                 background: linear-gradient( rgba(0, 152, 182, 0.623), rgba(0, 152, 182, 0.623)), url(../img/upscale.jpg);
                 background-size: cover;
-                font-size: 1.8em;
+                font-size: 1.8vw;
             }
 
 
@@ -503,7 +505,7 @@ html, body, div, span, object, iframe,
                 transform: scale(1.1);
                 background: linear-gradient( rgba(0, 152, 182, 0.623), rgba(0, 152, 182, 0.623)), url(../img/luxury.jpg);
                 background-size: cover;
-                font-size: 1.8em;
+                font-size: 1.8vw;
             }
             .elegant_img{
                 background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/elegant.jpg);
@@ -514,7 +516,7 @@ html, body, div, span, object, iframe,
                 transform: scale(1.1);
                 background: linear-gradient( rgba(0, 152, 182, 0.623), rgba(0, 152, 182, 0.623)), url(../img/elegant.jpg);
                 background-size: cover;
-                font-size: 1.8em;
+                font-size: 1.8vw;
             }
 
             #testimonial{
@@ -603,6 +605,27 @@ html, body, div, span, object, iframe,
                 #grid_container{
                     grid-column-gap: 0px;
                     grid-row-gap: 46px;
+                }
+                
+            }
+            
+            /**Implementing Media Query for 1024 breakpoint**/
+            @media screen and (max-width: 768px){
+                
+                #footstruct .footer_links {
+
+                    margin-top: 25%;
+                    height: 135px;
+                }
+                
+                .banner_box #profile_signup {
+                    width: auto;
+
+                }
+                
+                h3{
+                    font-size: 3.8vw;
+
                 }
                 
             }
