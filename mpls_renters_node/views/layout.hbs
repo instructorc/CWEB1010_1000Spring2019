@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MPLSRenters.com | Luxury Downtown Minneapolis Apartments</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Luxury Downtown Minneapolis Apartments">
+        <meta name="keywords" content="Luxury Apartments, Downtown Living, Downtown Minneapolis Apartments">
+        <meta name="author" content="C.Fulton">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Favicon-->
+        <link rel="shortcut icon" href="img/logo.png">
+        <script src="javascripts/code.js"></script>
+        <!--Link to external CSS-->
+        <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+
+        <!--Montserrat font from Google-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+        <!--Implementing JQuery Flickity slider plugin-->
+        <!-- JavaScript -->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <!--Internal CSS Style Method-->
+        <style>
+            
+        </style>
+
+    </head>
+    <body>
+        <header id="headstruct">
+            <div class="block_contain"><!--Flex container-->
+                <div id="logo">
+                    <a href="index.html"></a><img src="images/logo.png" alt="logo"></a>
+                </div><!--Flex item 1-->
+                <nav id="navstruct">
+                    <ul id="listruct">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="process.html">Process</a></li>
+                        <li><a href="#apartment_search_block">Apartments</a></li>
+                        <li><a href="prop_agents.html">Agents</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav><!--flex item 2-->
+                <div id="user_info">
+                    <img src="images/notification_icon.PNG" style="margin-top: 15px;" alt="notification bell">
+                    <img src="images/person_icon.PNG" alt="profile icon">
+                </div><!--flex item 3-->
+                <!--Mobile Navigation-->
+                <nav id="navstruct_mobile"><span id="hamburger_icon"> &#9776;</span>
+                   <!-- <div id="user_info_mobile" style="display: none;">
+                        <img src="img/notification_icon.PNG" style="margin-top: 15px;" alt="notification bell">
+                        <img src="img/person_icon.PNG" alt="profile icon">
+                    </div>-->
+                    <ul id="listruct_mobile" style="display: none;">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="process.html">Process</a></li>
+                        <li><a href="#apartments">Apartments</a></li>
+                        <li><a href="prop_agents.html">Agents</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav><!--flex item 2-->
+
+                <!--End of Mobile Navigation-->
+            </div><!--end of div block_contain-->
+        </header>
+
+            {{{body}}}
+
+        <footer id="footstruct">
+
+            <div class="footer_links">
+            <section class="footer_title">
+                <h3>Contact Us</h3>
+            </section>
+                <ul>
+                    <li>1.815.277.9239</li>
+                    <li>info@mplsrenters.com</li>
+                    <li>catch us @mplsrenters</li>
+                </ul>
+            </div>
+
+            <div class="footer_links">
+            <section class="footer_title">
+                <h3>Services</h3>
+            </section>
+                <ul>
+                    <li><a href="">Advertise</a></li>
+                    <li><a href="">Agent services</a></li>
+                    <li><a href="">Referrals</a></li>
+                    <li><a href="">Corporate Leasing</a></li>
+                    <li><a href="">Open Houses</a></li>
+                    <li><a href="">Renters Insurance</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_links">
+                <section class="footer_title">
+                    <h3>Information</h3>
+                </section>
+                <ul>
+                    <li>About MPLS Renters</li>
+                    <li>Leadership</li>
+                    <li>Terms and Agreements</li>
+                    <li>Media</li>
+                </ul>
+            </div>
+            
+        </footer>
+
+        <script src="javascripts/apartment_data.js"></script>
+        <script>
+            //this will allow me to format the affordable payment to a US currency value
+            // Create our number formatter.
+            var formatter = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 2,
+            // the default value for minimumFractionDigits depends on the currency
+            // and is usually already 2
+            });
+            
+            
+            
+            //Creating an object that will hold the data for the renter
+            var renter ={
+                renterFirstName: "",
+                renterCalcPercentage: .25,
+                renterLastName: "",
+                renterEmail: "",
+                renterPreferredMonth: "",
+                renterRentRange: "",
+                calculateAffordablePayment: function(){
+                    if(this.renterRentRange == 1){
+                        return 999.00- (1 * this.renterCalcPercentage);
+                    }else if(this.renterRentRange == 2){
+                        return 1399.00- (1 * this.renterCalcPercentage);
+                    }else if(this.renterRentRange == 3){
+                        return 1599.00- (1 * this.renterCalcPercentage);
+                    }else if(this.renterRentRange == 4){
+                        return 1999.00- (1 * this.renterCalcPercentage);
+                    }else if(this.renterRentRange == 5){
+                        return 2499.00- (1 * this.renterCalcPercentage);
+                    }else if(this.renterRentRange == 6){
+                        return 2999.00- (1 * this.renterCalcPercentage);
+                    }else if(this.renterRentRange == 7){
+                        return 3499.00- (1 * this.renterCalcPercentage);
+                    }else if(this.renterRentRange == 8){
+                        return 3999.00- (1 * this.renterCalcPercentage);
+                    }else if(this.renterRentRange == 9){
+                        return 4999.00 - (1 * this.renterCalcPercentage);
+                    }else if(this.renterRentRange == 10){
+                        return 10000.00- (1 * this.renterCalcPercentage);
+                    }
+                }
+            }//end of renter object
+            /**Create a function that will gather data and attach an addEventListener that will
+             * listen for the click of the button**/
+            document.getElementById('submit').addEventListener('click', ()=>{
+                renter.renterFirstName = document.getElementById('first').value;
+                renter.renterLastName = document.getElementById('last').value;
+                renter.renterEmail = document.getElementById('email').value;
+                renter.renterPreferredMonth = document.getElementById('preferred_month').value;
+                renter.renterRentRange = document.getElementById('rent_range').value;
+                //Test to make sure values are accurately being gather from elements
+                console.log(`The first name is ${renter.renterFirstName} the second name is ${renter.renterLastName} the email is ${renter.renterEmail} the preferred month is ${renter.renterPreferredMonth} the rentRange is ${renter.renterRentRange} the amount this renter can afford is: ${formatter.format(renter.calculateAffordablePayment())}`);
+                //Test to make sure our function is calculating correctly
+            })
+            document.getElementById("hamburger_icon").addEventListener('click', function(){
+                
+                if(document.getElementById('listruct_mobile').style.display === "none"){
+                document.getElementById('listruct_mobile').style.display= "block";
+                document.getElementById('user_info_mobile').style.display= "block";
+                }else{
+                    document.getElementById('listruct_mobile').style.display= "none";
+                    document.getElementById('user_info_mobile').style.display= "none";
+                }
+                
+            });
+            document.addEventListener('load', function(){
+                var images = document.getElementsByClassName('apart_logo');
+                for(var j = 0; j < images.length; j++){
+                    images[j].style.display = "block";
+                }
+            });
+       
+            //refesh images once select region is clicked
+            function generateImages(){
+                     //get all images
+                var images = document.getElementsByClassName('apart_logo');
+                for(var w = 0; w < images.length; w++){
+                    images[w].style.display = "none";
+                }
+            }
+            /**filter by region**/
+            function getByRegion(selection){
+                var data= [];
+                if(selection == "all"){
+
+                    
+                    
+                }else{
+                    for(var x = 0; x < apartment.length; x++){
+                        if(apartment[x].city_region === selection){
+                        data.push(apartment[x]);
+                        console.log(apartment[x].apartment);
+                        }
+                  
+                    }
+                }
+                //get one of the values in the array and pass in the propery_id from the array
+                
+                //
+                filterApartments(data, selection); //call function passing two arguments which apartments should display
+                initMap(data);//call the function and pass the selected data array and determine which markers should display
+            }
+            function filterApartments(data, selection){
+                //Turn all the images off by setting them to display none
+                generateImages();
+                //get all images
+                var images = document.getElementsByClassName('apart_logo');
+                //iterate through the data array and only show images that are included in array
+                //var index = data.findIndex(data.city_region == selection);
+                
+                /**for(var w = 0; w < images.length; w++){
+                    if(images[w].dataset.region == selection){
+                        images[w].style.display = "block";
+                    }
+                    
+                }**/
+             
+                if(selection === "all"){
+                    for(var b = 0; b < images.length; b++){
+                        images[b].style.display ="block";
+                    }
+                           
+                            
+                }else{
+                    for(var i = 0; i < data.length; i++){
+                        //display the images from the data array
+                            //make a decision as to 
+                           
+                            
+                        for(var w = 0; w < images.length; w++){
+                            if(data[i].property_id == images[w].dataset.id){
+                                images[w].style.display = "block";
+                            }
+                        }
+                    
+                        
+                    }
+                }
+                
+                
+                    
+            }
+            
+            
+            /**Implementing Google Map **/
+            function initMap(data) {
+                var myLatLng = {lat: 44.981761, lng:-93.2652097};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+                center: myLatLng
+                });
+                //declare variables
+                var marker, i;
+                
+                
+                //iterate through the apartment data and create new instances of a marper that will be applied to map
+                for(i = 0; i < data.length; i++) {  
+                    marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(data[i].latitude, data[i].longitude),
+                        map: map,
+                        title: data[i].apartment
+                    });
+                }
+            }
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value; // Display the default slider value
+            // Update the current slider value (each time you drag the slider handle)
+            slider.oninput = function() {
+                output.innerHTML = this.value;
+            }
+        </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEP-pNQmS4jEkCKu3dGRpnu-wZ86YGN3Q&callback=initMap"></script>
+
+    </body>
+</html>
